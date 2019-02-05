@@ -1,38 +1,24 @@
 " My Preferences
-
-" 日本語の設定
 set encoding=utf-8
-
-"  TABを押した時に半角スペースを指定した数だけ挿入
 set tabstop=4
 set shiftwidth=4
 set expandtab
-
-" 自動インデントの設定
+set nowrap
 set noautoindent
+set noswapfile
+colorscheme darkblue
+syntax on
 
- " # の後に自動で # が入るプラグインを無効
+ " inores inserting comment to next row after commented row
 filetype plugin indent off
 
-" 全角記号が使用されていた場合表示が変になる問題への解決策
+" for multibyte characters
 if exists('&ambiwidth')
   set ambiwidth=double
 endif
 
-" 折り返しの可否
-set nowrap
-
-" thema
-colorscheme darkblue
-
-" no swap
-set noswapfile
-
-" syntax highlight
-syntax on
-
-" key mapping
-" need to execute -> stty -ixon -ixoff
+" key mappings
+" echo stty -ixon -ixoff >> /etc/profile
 nnoremap <C-n> :set nu<ENTER>
 nnoremap <C-n><C-n> :set nonu<ENTER>
 nnoremap <C-s> :wa<ENTER>
