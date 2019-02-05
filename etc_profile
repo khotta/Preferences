@@ -1,0 +1,6 @@
+alias ll='ls -lG'
+alias l='ls -lG'
+alias grep='grep --color'
+stty -ixon -ixoff
+export PS1="[\u@MacBook \W]$ "
+export EDITOR=vim
